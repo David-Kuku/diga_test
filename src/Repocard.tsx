@@ -80,7 +80,7 @@ const Repocard = (props: Props) => {
                                     if (users.node.login || users.node.name) {
                                         return (
                                             
-                                            <UsersScreen users={users} />
+                                            <UsersScreen key={users.node.id} users={users} />
                                         )
                                     }
                                     else {
@@ -96,7 +96,7 @@ const Repocard = (props: Props) => {
                                 {repo.data && repo.data.search.edges.map((repo) => {
                                     if (repo.node.name) {
                                         return (
-                                            <RepositoriesScreen repo={repo} />
+                                            <RepositoriesScreen key={repo.node.id} repo={repo} />
                                             
                                         )
                                     }

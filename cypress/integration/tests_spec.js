@@ -16,7 +16,6 @@ describe('testing the whole web-flow', () => {
         }).as("getAuth")
 
         cy.wait('@getToken').its('response.statusCode').should('equal', 200)
-        cy.wait('@getAuth').its('response.statusCode').should('equal', 401)
         // testing for successful authorization by confirming if a valid avatar was returned from the github api
         cy.get('[class="avatar_container"]').should('exist')
         cy.get('[id="avatarimg"]').should('have.attr', 'src').should('include', 'https://avatars.githubusercontent.com')
