@@ -5,7 +5,7 @@ import './Repocard.css'
 
 import { connect } from 'react-redux'
 import { setsearchvalue } from './Redux/Actions'
-// import PaginateButtons from './PaginateButtons'
+import PaginateButtons from './PaginateButtons'
 import UsersScreen from './UsersScreen'
 import RepositoriesScreen from './RepositoriesScreen'
 
@@ -88,7 +88,7 @@ const Repocard = (props: Props) => {
                                     }
 
                                 })}
-                                {/* <PaginateButtons toggle={toggle} users={users} repo={repo} /> */}
+                                <PaginateButtons toggle={toggle} users={users} repo={repo} />
                             </div> :
 
                             <div style={{}}>
@@ -105,7 +105,7 @@ const Repocard = (props: Props) => {
                                     }
 
                                 })}
-                                {/* <PaginateButtons toggle={toggle} users={users} repo={repo} /> */}
+                                <PaginateButtons toggle={toggle} users={users} repo={repo} />
                             </div>
                         }
                     </div>
