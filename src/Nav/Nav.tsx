@@ -33,7 +33,7 @@ const Nav = () => {
                             src=""
                             data-test-id="user_avatar" />
                     </div>
-                    <span id="username">David Kuku</span>
+                    <span id="username">Jon Doe</span>
                 </div>
             </div>
 

@@ -2,6 +2,13 @@ import './App.css';
 import LoginGithub from 'react-login-github';
 import { useState } from 'react';
 import Search from './Search/Search';
+import {
+  ApolloClient,
+  InMemoryCache,
+  ApolloProvider,
+} from "@apollo/client";
+import { Provider } from 'react-redux';
+import store from './Redux/Store';
 
 
 
@@ -10,6 +17,18 @@ const App = () => {
   const [auth, setAuth] = useState<string>("")
   const [token, setToken] = useState("")
 
+  // const link = from([
+  //   // errorLink,
+  //   new HttpLink({uri: "https://api.github.com/graphql"} )
+  // ])
+  const client = new ApolloClient({
+    cache: new InMemoryCache,
+    uri: "https://api.github.com/graphql",
+    headers: {
+      Authorization: `bearer ${token}`
+    }
+  })
+  console.log(token)
 
   const onFailure = (response: any) => console.error(response);
 
@@ -34,12 +53,14 @@ const App = () => {
     postRequest(response)
   }
   return (
+    <ApolloProvider client={client}>
+      <Provider store={store}>
         <div className="App">
           {auth === "" ?
             <div className="main">
               <div className="main_div">
                 <div>
-                  <div className="d_search"><img alt="" src="logo.jpg" /><b id="login_click">Diga Search</b></div>
+                  <div className="d_search"><img alt="" src="logo.jpg" /><b >Diga Search</b></div>
                   <LoginGithub clientId="4f262cc9e20d3043da02"
                     onSuccess={onSuccess}
                     onFailure={onFailure}
@@ -54,7 +75,8 @@ const App = () => {
             </div>
           }
         </div>
-
+      </Provider>
+    </ApolloProvider>
   );
 }
 

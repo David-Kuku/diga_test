@@ -1,0 +1,131 @@
+.count{
+    width: 231px;
+    height: 30px;
+    
+    font-family: DM Sans;
+    font-style: normal;
+    font-weight: bold;
+    font-size: 20px;
+    line-height: 30px;
+    /* identical to box height, or 150% */
+    
+    
+    color: #1A0C88;
+}
+
+.card{
+    background: whitesmoke;
+    box-shadow: 0px 6px 58px rgba(196, 203, 214, 0.1);
+    border-radius: 3px;
+    width: 680px;
+    padding-left: 20px;
+    padding-right: 20px;
+    margin-bottom: 20px;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    box-sizing: border-box;
+}
+
+.card_h3{
+    margin: 5px;
+    text-transform: capitalize;
+}
+.toggle{
+    width: 280px;
+    height: 140px;
+
+    background: #FFFFFF;
+    box-shadow: 0px 6px 58px rgba(196, 203, 214, 0.1);
+    border-radius: 3px;
+}
+
+.active_toggle{
+    width: 220px;
+    height: 40px;
+    padding: 10px;
+    box-sizing: border-box;
+    background: #F7F7F8;
+    margin: 10px;
+    color: #1A0C88;
+    font-family: DM Sans;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 14px;
+    line-height: 18px;
+    display: flex;
+    justify-content: space-between;
+}
+.category{
+    width: 220px;
+    height: 40px;
+    display: flex;
+    align-items: center;
+    margin: 10px;
+    color: #1A0C88;
+    font-family: DM Sans;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 14px;
+    line-height: 18px;
+    justify-content: space-between;
+    cursor: pointer;
+}
+.count_cont{
+    width: 50px;
+    height: 25px;
+    float: right;
+    background: #7143FE;
+    border-radius: 10px;
+    color: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+}
+
+.count{
+    height: 30px;
+    width: 500px;
+    font-family: DM Sans;
+    font-style: normal;
+    font-weight: bold;
+    font-size: 22px;
+    line-height: 30px;
+    color: #1A0C88;
+    margin-bottom: 30px;
+}
+.active_btn{
+    width: 100px;
+    height: 40px;
+    background: #7143FE;
+    border-radius: 10px;
+    cursor: pointer;
+    border: none;
+    margin:20px;
+    color: white;
+    /* transform: matrix(-1, 0, 0, 1, 0, 0); */
+}
+
+.btn{
+    width: 40px;
+    height: 40px;
+    border-radius: 10px;
+    cursor: pointer;
+    border: none;
+    margin: 20px;
+}
+
+.fields{
+    margin-right: 10px;
+    margin-left: 5px;
+    color: #91929E;
+    display: flex;
+    align-items: center;
+    font-size: 13px;
+}
+
+#fields{
+    border-right: 1px solid #91929E;
+    padding-right: 10px;
+    
+}
